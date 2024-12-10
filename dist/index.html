@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>/* Custom Animations */
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Enhanced Styles */
+        .swiper-pagination-bullet-active {
+            width: 14px;
+            height: 14px;
+            background-color: #ffd700;
+            transform: scale(1.5);
+            transition: transform 0.3s;
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+            transform: scale(1.05);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .swiper-slide-active {
+            border: 2px solid #ffd700;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .text-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .swiper-button-prev:focus,
+        .swiper-button-next:focus {
+            outline: 2px solid #ffd700;
+            outline-offset: 2px;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Positioning the navigation buttons */
+        .swiper-button-prev, .swiper-button-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: white;
+        }
+
+        .swiper-button-prev {
+            left: 10px;
+        }
+
+        .swiper-button-next {
+            right: 10px;
+        }</style>
+</head>
+<body class="max-h-[8060px]">
+    
+        <nav  class="flex px-7 py-5  items-center fixed z-[99999] w-[100%] bg-white bg-opacity-0 ">
+            <div onclick="Scroll()" class="Title text-3xl font-bold md:py-0 py-4 px-10 cursor-pointer">Design Hub
+            </div>
+            <ul class="md:px-2 ml-auto md:flex md:space-x-2 absolute md:relative top-full left-0 right-7">
+                <li>
+                    <a onclick="Scroll1()" class="Presentation cursor-pointer flex md:inline-flex text-[20px] p-4 items-center hover:text-yellow-400">
+                        <span>Presentation</span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="Scroll2()" class="flex md:inline-flex p-4 cursor-pointer items-center text-[20px] hover:text-yellow-400">
+                        <span>Shedule</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a onclick="Scroll3()" class="flex cursor-pointer md:inline-flex p-4 items-center text-[20px] hover:text-yellow-400">
+                        <span>Speakers</span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="Scroll4()" class="flex cursor-pointer md:inline-flex p-4 items-center text-[20px] hover:text-yellow-400">
+                        <span>Workshops</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex md:inline-flex rounded-[25px] border-[1px] text-[20px] py-[5px] px-[30px] hover:py-[6px] border-black hover:border-none hover:bg-black hover:px-[31px]  hover:text-white relative top-[10px]">
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="ml-auto md:hidden text-red-500 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+            </div>
+        </nav>
+    </div>
+ 
+    <div class="parentContent relative bottom-[100px]">
+
+        <div class="imgs1 relative bottom-[100px] py-[150px] delay-[300ms] duration-[600ms]">
+        <div class="img1 bg-red-400 py-[150px] relative top-[43px] z-[1] border-b-2 border-black">
+            <img data-aos="fade-left" data-aos-duration="1200" src="https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/f9c8a17b-91e3-4d85-91da-be085b5db703.png" alt="My img" class="h-[400px] w-[400px] border-black border-[10px]  bg-yellow-400 rounded-r-[300px] relative left-[590px]">
+        </div>
+        <div class="img2 border-2 bg-blue-400 py-[150px] relative top-10">
+            <img data-aos="fade-up" src="https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/b717f72c-811b-4a79-a679-3a0fc9e642b1.png" alt="" class="h-[400px] w-[400px] border-black border-[10px]  bg-pink-400 rounded-l-[300px]  relative left-[850px]">
+        </div>
+
+        <div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="relative bottom-[1250px] m-[70px] z-[2]">
+                    <h3 class="text-[50px] font-black">Design Summit :</h3>
+                    <h2 class="text-[60px] relative font-black">Unleashing</h2>
+                    <h1 class="text-[100px] font-black text-yellow-400 relative bottom-[45px]">Creative</h1>
+                    <h1 class="text-[100px] font-black text-yellow-400 relative bottom-[95px]">brilliance</h1>
+                </div>
+        </div>
+        <div class="main-div relative bottom-[100px]">
+                <div data-aos="fade-up" class="relative bottom-[970px] m-[70px]">
+                    <span class="text-[35px] font-semibold">San Fracisco<t class="text-red-900"> March 25-27</t></span>
+                </div>
+                <div data-aos="fade-up" class="relative bottom-[1000px] m-[70px]">
+                    <button class="border-none rounded-[25px] border-[10px] text-[20px] py-[7px] px-[39px] bg-pink-400 hover:bg-red-900 hover:text-pink-400 border-black">Shedule</button>
+                    <button class="MyLearn rounded-[25px] border-[1px] text-[20px] py-[5px] px-[30px] hover:py-[6px] border-black hover:border-none hover:bg-black  hover:text-white">Learn more</button>
+                </div>
+                <div id="countdown" data-aos="fade-up" class="flex gap-[20px] text-center text-[2rem] relative bottom-[970px] m-[70px]">
+                    <div class="flex columns-1 text-center">
+                        <span id="days" class="text-[80px]">00</span>
+                        <p class="relative text-[17px] right-[60px] bottom-[15px]">Days</p>
+                    </div>
+                    <span class="text-[70px] relative right-[18px]"> : </span>
+                    <div class="flex columns-1 text-center">
+                        <span id="hours" class="text-[80px]">00</span>
+                        <p class="relative text-[17px] right-[60px] bottom-[15px]">Hours</p>
+                    </div>
+                        <span class="text-[70px] relative right-[18px]"> : </span>
+                    <div class="flex columns-1 text-center">
+                        <span id="minutes" class="text-[80px]">00</span>
+                        <p class="relative text-[17px] right-[60px] bottom-[15px]">Minutes</p>
+                    </div class="flex columns-1 text-center">
+                        <span class="text-[70px] relative right-[18px]"> : </span>
+                    <div class="flex columns-1 text-center">
+                        <span id="seconds" class="text-[80px]">00</span>
+                        <p class="relative text-[17px] right-[60px] bottom-[15px]">Seconds</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+            <div class="imgs2">
+                <div class="img1">
+                    <img data-aos="fade-up" data-aos-duration="2000" src="https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/81c8e230-5ec9-42de-9b04-f074f0e0cabd.png" alt="" class="m-20 relative bottom-[1200px] h-[350px] w-[300px] rounded-br-[25px] overflow-hidden rounded-tl-[25px]">
+                </div>
+                <div class="img2">
+                    <img data-aos="fade-up" data-aos-duration="2000" src="https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/1a45abf1-5c9e-4e6b-ac4f-769798fd0b5c.png" alt="" class="m-20 relative bottom-[1250px] h-[400px] overflow-hidden w-[300px] rounded-bl-[25px] rounded-tr-[25px]">
+                </div>
+                <div class="img3">
+                    <img data-aos="fade-up" data-aos-duration="2000" src="https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/9fc1f639-d730-4880-9144-75113c0dd583.png" alt="" class="m-20 relative bottom-[2000px] left-[330px] h-[450px] w-[300px] rounded-br-[25px] rounded-tl-[25px]">
+                </div>
+            </div>
+            <div class="relative top-[150px]">
+                <h1 data-aos="fade-up" class="myH1 relative bottom-[2700px] w-[500px] left-[750px] p-0 text-pink-500 font-bold text-[50px]"><t class="text-black">Welcome to the greatest</t> designers conference 2024</h1>
+                <p data-aos="fade-up" class="myP relative bottom-[2650px] w-[500px] text-[25px] left-[750px] p-0 text-black space-x-[40px]">Embark on a transformative journey at the<b> Design Summit</b>, an immersive convergence of creativity and innovation. Join industry pioneers, thought leaders, and visionaries as we explore the forefront of design, setting the stage for a future shaped by ingenuity and collaborative brilliance.</p>
+                <p data-aos="fade-up" class="myP2 relative bottom-[2600px] w-[500px] text-[25px] left-[750px] p-0 text-black space-x-[40px]"><b>Design Summit </b>is where inspiration meets execution, defining the next era of design excellence. Don't miss your chance to be part of this unparalleled experience!</p>
+                <button data-aos="fade-up" class="MyRead rounded-[25px] border-[1px] relative bottom-[2550px] left-[750px]  text-[20px] py-[5px] px-[30px] hover:py-[6px] border-black hover:border-none hover:bg-black  hover:text-white">Read more</button>
+            </div>
+            <div class="relative bottom-[2400px] m-[70px]">
+            <h1 data-aos="fade-up" class="font-bold text-[50px]">
+                Schedule
+            </h1>
+            <p data-aos="fade-up" class="text-[25px] relative top-[20px]">
+                Embark on a day of knowledge and inspiration with our thoughtfully curated program.
+            </p>
+            <p data-aos="fade-up" class="text-[25px] relative top-[30px]">
+                From keynotes to hands-on workshops, each segment offers valuable insights and practical skills.
+            </p>
+            <div class="zigzag-border  relative top-[90px] right-[60px] w-[1267px] bg-blue-400  flex justify-center h-[1500px] items-center m-[-14px] text-[#292929] py-[70px]">
+                <div class="m-[100px] relative top-[350px]">
+                    <div class="relative bottom-[50px] w-[50%] delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0" data-taos-offset="300">
+                        <p data-aos="fade-up" class="text-[30px] font-bold text-red-800">Friday 25 Mar</p>
+                        <h1 data-aos="fade-up" class="relative top-[30px] font-extrabold text-[40px] text-green-800">Elevating User Experiences through Design Thinking</h1>
+                        <p data-aos="fade-up" class="font-black relative top-[40px] text-[20px]">16:30 GMT @Remote</p>
+                        <p data-aos="fade-up" class="text-[20px] font-bold relative top-[60px]">Join us for an immersive exploration of design thinking principles and their impact on user experiences. Discover innovative approaches to problem-solving and how design can elevate the user journey. Don't miss this opportunity to gain insights from leading designers and enhance your creative process.</p>
+                        <button data-aos="fade-up" class="bg-black border-none rounded-[25px] relative top-[90px] text-white py-[10px] px-[25px] font-bold hover:border-2 hover:border-black hover:text-black hover:bg-white">Read More</button>
+                    </div>
+                    <div class="relative bottom-[470px] left-[575px] w-[55%]">
+                        <p data-aos="fade-up" class="text-[30px] font-bold text-red-800">Saturday 26 Mar</p>
+                        <h1 data-aos="fade-up" class="relative top-[30px] font-extrabold text-[40px] text-green-800">Digital Expression: Pushing Boundaries in Creative Tech</h1>
+                        <p data-aos="fade-up" class="font-black relative top-[40px] text-[20px]">18:00 GMT @Online</p>
+                        <p data-aos="fade-up" class="text-[20px] font-bold relative top-[60px]">Explore the intersection of technology and creativity in this dynamic conference. Learn from digital artists and tech innovators as they showcase groundbreaking projects that redefine digital expression. Unleash your creativity and discover the limitless possibilities at the forefront of digital art and technology.s</p>
+                        <button data-aos="fade-up" class="bg-black border-none rounded-[25px] relative top-[90px] text-white py-[10px] px-[25px] font-bold hover:border-2 hover:border-black hover:text-black hover:bg-white">Read More</button>
+                    </div>
+                    <div class="relative bottom-[300px] w-[50%]">
+                        <p data-aos="fade-up" class="text-[30px] font-bold text-red-800">Sunday 27 Mar</p>
+                        <h1 data-aos="fade-up" class="relative top-[30px] font-extrabold text-[40px] text-green-800">Crafting Seamless Experiences: A UX/UI Workshop</h1>
+                        <p data-aos="fade-up" class="font-black relative top-[40px] text-[20px]">13:45 GMT @Remote</p>
+                        <p data-aos="fade-up" class="text-[20px] font-bold relative top-[60px]">Dive into the world of user experience and user interface design with hands-on activities and expert guidance. This workshop is perfect for designers and enthusiasts looking to enhance their skills. Learn practical tips, engage in interactive design exercises, and leave with a deeper understanding of creating impactful digital experiences.</p>
+                        <button data-aos="fade-up" class="bg-black border-none rounded-[25px] relative top-[90px] text-white py-[10px] px-[25px] font-bold hover:border-2 hover:border-black hover:text-black hover:bg-white">Read More</button>
+                    </div>
+                    <div  class="relative bottom-[808px] left-[575px] w-[54%]">
+                        <p data-aos="fade-up" class="text-[30px] font-bold text-red-800">Sunday 27 Mar</p>
+                        <h1 data-aos="fade-up" class="relative top-[30px] font-extrabold text-[40px] text-green-800 w-[500px]">Graphic Innovation: Redefining Visual Communication</h1>
+                        <p data-aos="fade-up" class="font-black relative top-[40px] text-[20px]">15:30 GMT @Online</p>
+                        <p data-aos="fade-up" class="text-[20px] font-bold relative top-[60px]">Immerse yourself in a captivating discussion on the latest trends and innovations in graphic design. Explore the evolving landscape of visual communication and discover how graphic designers are reshaping the way we perceive information. Get ready to be inspired and rethink the possibilities of graphic innovation.</p>
+                        <button data-aos="fade-up" class="bg-black border-none rounded-[25px] relative top-[115px] text-white py-[10px] px-[25px] font-bold hover:border-2 hover:border-black hover:text-black hover:bg-white">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="Speakers relative top-[300px] m-0">
+                <div class="text">
+                    <h1 data-aos="fade-up" class="font-black text-[60px]">Meet the Speakers</h1>
+                    <p data-aos="fade-up" class="text-[25px] relative top-[25px]">Meet visionary leaders shaping the future. Our speakers share experiences and innovative ideas. Connect with bright minds redefining industry boundaries.</p>
+                </div>
+                <!-- Swiper Section -->
+                <div class="w-[1200px]  px-[100px] relative right-[50px] top-[100px] z-10">
+                    <div data-aos="fade-up" data-aos-duration="2000" class="swiper" aria-live="polite">
+                        <div  class="swiper-wrapper ">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide bg-gray-800 relative max-h-[485px] rounded-lg  shadow-xl hover:scale-105 transition duration-300"
+                                role="group" aria-labelledby="slide-1">
+                                <div class="w-1/2 relative left-[500px] text-overlay ">
+                                    <div class="h-[450px]">
+                                        <div class="mb-4">
+                                            <div class="text-4xl font-bold text-yellow-400 mr-4">Mia</div>
+                                            <div>
+                                                <div class="text-sm text-gray-500">Reynolds</div>
+                                            </div>
+                                        </div>
+                                        <h2 id="slide-1"
+                                            class="text-3xl font-semibold mb-4 hover:text-yellow-400 transition-colors duration-300 text-white">
+                                            Digital Illustrator and Visual Storyteller</h2>
+                                        <p class="text-sm text-gray-400 mb-4">Mia Reynolds is a digital artist and illustrator renowned for her captivating visual storytelling. With a unique blend of digital techniques and traditional artistry, Mia brings imagination to life in her creations. Mia's work has been featured in art exhibitions globally, and she is a sought-after speaker at creative events. Her talks explore the fusion of technology and art, inspiring fellow creatives to push the boundaries of their craft.</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/96391d0c-7f5b-4082-abcf-ce459498c3b7.png"
+                                        alt="News headline image showing a serene landscape" class="rounded-lg relative bottom-[485px] opacity-90 hover:opacity-100  w-[500px] h-[485px] transition-all "
+                                        loading="lazy" width="100%" height="auto">
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide bg-gray-800 relative max-h-[485px] rounded-lg  shadow-xl hover:scale-105 transition duration-300"
+                                role="group" aria-labelledby="slide-1">
+                                <div class="w-1/2 relative left-[500px] text-overlay ">
+                                    <div class="h-[450px]">
+                                        <div class="mb-4">
+                                            <div class="text-4xl font-bold text-yellow-400 mr-4">Taylor</div>
+                                            <div>
+                                                <div class="text-sm text-gray-500">Mitchell</div>
+                                            </div>
+                                        </div>
+                                        <h2 id="slide-1"
+                                            class="text-3xl font-semibold mb-4 hover:text-yellow-400 transition-colors duration-300 text-white">
+                                            Creative Director at ColorCanvas Design Studio</h2>
+                                        <p class="text-sm text-gray-400 mb-4">Taylor Mitchell is a visionary in the world of design, serving as the Creative Director at ColorCanvas Design Studio. With a keen eye for aesthetics and a strategic approach to branding, Taylor has led numerous successful design campaigns for global brands. A passionate advocate for the power of design in storytelling, Taylor frequently speaks at design conferences, sharing insights on the intersection of creativity and brand strategy.</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/e1ecda29-a7c5-4150-8de6-71a93da65429.png"
+                                        alt="News headline image showing a serene landscape" class="rounded-lg relative bottom-[485px] opacity-90 hover:opacity-100  w-[500px] h-[485px] transition-all "
+                                        loading="lazy" width="100%" height="auto">
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide bg-gray-800 relative max-h-[485px] rounded-lg  shadow-xl hover:scale-105 transition duration-300"
+                                role="group" aria-labelledby="slide-1">
+                                <div class="w-1/2 relative left-[500px] text-overlay ">
+                                    <div class="h-[450px]">
+                                        <div class="mb-4">
+                                            <div class="text-4xl font-bold text-yellow-400 mr-4">Olivia</div>
+                                            <div>
+                                                <div class="text-sm text-gray-500">Harper</div>
+                                            </div>
+                                        </div>
+                                        <h2 id="slide-1"
+                                            class="text-3xl font-semibold mb-4 hover:text-yellow-400 transition-colors duration-300 text-white">
+                                            Principal Designer at CreativEdge Studio</h2>
+                                        <p class="text-sm text-gray-400 mb-4">Olivia Harper is a highly innovative graphic designer and the principal designer at CreativEdge Studio. Known for her ability to merge aesthetics with functionality, Olivia has played a pivotal role in transforming design trends. Her work has received acclaim in the design community, and Olivia is a frequent speaker at graphic design symposiums. Through her presentations, Olivia inspires designers to think outside the box, embrace experimentation, and redefine the visual language of design.</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/4ebbd255-15ea-4d3a-a80f-66c9f8231ca3.png"
+                                        alt="News headline image showing a serene landscape" class="rounded-lg relative bottom-[485px] opacity-90 hover:opacity-100  w-[500px] h-[485px] transition-all "
+                                        loading="lazy" width="100%" height="auto">
+                                </div>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide bg-gray-800 relative max-h-[485px] rounded-lg  shadow-xl hover:scale-105 transition duration-300"
+                                role="group" aria-labelledby="slide-1">
+                                <div class="w-1/2 relative left-[500px] text-overlay ">
+                                    <div class="h-[450px]">
+                                        <div class="mb-4">
+                                            <div class="text-4xl font-bold text-yellow-400 mr-4">Jordan</div>
+                                            <div>
+                                                <div class="text-sm text-gray-500">Carter</div>
+                                            </div>
+                                        </div>
+                                        <h2 id="slide-1"
+                                            class="text-3xl font-semibold mb-4 hover:text-yellow-400 transition-colors duration-300 text-white">
+                                            Founder and Lead Designer at PixelCraft UX</h2>
+                                        <p class="text-sm text-gray-400 mb-4">Jordan Carter is a trailblazer in the field of user experience (UX) and user interface (UI) design. As the founder of PixelCraft UX, Jordan has been at the forefront of creating seamless and visually appealing digital experiences. With a passion for human-centric design, Jordan shares expertise at design conferences, emphasizing the importance of user empathy and elegant design solutions in today's digital landscape.</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/e57a1bfd-1270-4259-a409-95421348c301.png"
+                                        alt="News headline image showing a serene landscape" class="rounded-lg relative bottom-[485px] opacity-90 hover:opacity-100  w-[500px] h-[485px] transition-all "
+                                        loading="lazy" width="100%" height="auto">
+                                </div>
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="swiper-slide bg-gray-800 relative max-h-[485px] rounded-lg  shadow-xl hover:scale-105 transition duration-300"
+                                role="group" aria-labelledby="slide-1">
+                                <div class="w-1/2 relative left-[500px] text-overlay ">
+                                    <div class="h-[450px]">
+                                        <div class="mb-4">
+                                            <div class="text-4xl font-bold text-yellow-400 mr-4">Amanda</div>
+                                            <div>
+                                                <div class="text-sm text-gray-500">Lee</div>
+                                            </div>
+                                        </div>
+                                        <h2 id="slide-1"
+                                            class="text-3xl font-semibold mb-4 hover:text-yellow-400 transition-colors duration-300 text-white">
+                                            UX Researcher & Human-Computer Interaction Expert</h2>
+                                        <p class="text-sm text-gray-400 mb-4">Introducing Amanda Lee, our UX Researcher and Human-Computer Interaction Expert. Amanda's work is fueled by a research-driven approach to UX design, ensuring that user needs are not just considered but are at the forefront of the design process. Join Amanda as she shares the methodologies behind her insightful research, guiding the creation of truly user-centric experiences. Explore the intersection of research and design with Amanda and gain valuable perspectives on creating products.</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/07a77579-2d66-49d4-acdf-20fe61197c84.png"
+                                        alt="News headline image showing a serene landscape" class="rounded-lg relative bottom-[485px] opacity-90 hover:opacity-100  w-[500px] h-[485px] transition-all "
+                                        loading="lazy" width="100%" height="auto">
+                                </div>
+                            </div>
+                            <!-- Slide 6 -->
+                            <div class="swiper-slide bg-gray-800 relative max-h-[485px] rounded-lg  shadow-xl hover:scale-105 transition duration-300"
+                                role="group" aria-labelledby="slide-1">
+                                <div class="w-1/2 relative left-[500px] text-overlay ">
+                                    <div class="h-[450px]">
+                                        <div class="mb-4">
+                                            <div class="text-4xl font-bold text-yellow-400 mr-4">Daniel</div>
+                                            <div>
+                                                <div class="text-sm text-gray-500">Rodriguez</div>
+                                            </div>
+                                        </div>
+                                        <h2 id="slide-1"
+                                            class="text-3xl font-semibold mb-4 hover:text-yellow-400 transition-colors duration-300 text-white">
+                                            UI/Visual Design Specialist</h2>
+                                        <p class="text-sm text-gray-400 mb-4">Meet Daniel Rodriguez, our UI/Visual Design Specialist, whose work transcends the ordinary. With a keen eye for visual aesthetics, Daniel transforms abstract concepts into visually stunning and user-friendly interfaces. His approach combines creativity with functionality, resulting in designs that not only catch the eye but also provide an optimal user experience. Join Daniel on a visual journey through the principles and practices that make UI design an art form.</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/37d0eac7-f072-4611-8c06-aa14f3b351f5.png"
+                                        alt="News headline image showing a serene landscape" class="rounded-lg relative bottom-[485px] opacity-90 hover:opacity-100  w-[500px] h-[485px] transition-all "
+                                        loading="lazy" width="100%" height="auto">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                <div data-aos="fade-up" class="swiper-button-prev swiper-button-prev relative left-[-120px] bottom-[220px] transform -translate-y-1/2  z-20 w-12 h-12 bg-gray-800 text-white rounded-full flex p-8 items-center font-mono justify-center shadow-md hover:bg-white transition duration-300 hover:text-gray-700"></div>
+                                <div data-aos="fade-up" class="swiper-button-next swiper-button-next relative bottom-[250px] left-[1050px]   transform -translate-y-1/2 z-[9] w-12 h-12 bg-gray-800 text-white rounded-full p-8 flex items-center justify-center shadow-md hover:bg-white hover:text-gray-700 transition duration-300"></div>
+                    </div>
+                </div>      
+            </div>
+            <div class="relative bottom-[2000px] py-[30px] bg-opacity-50 bg-[url('https://www.veeforu.com/wp-content/uploads/2023/02/pastel-blue-Youtube-thumbnail-background-No-Copyright.jpg')] bg-cover bg-center  w-full">
+                <div class="m-[70px] relative bottom-[30px]">
+                    <p data-aos="fade-up" class="text-[40px] text-green-800 font-black">Livestream Tickets Available</p>
+                    <p data-aos="fade-up" class="text-black font-bold relative text-[30px] top-[25px]">Unlock virtual access! Grab your Livestream tickets now to join the immersive experience from anywhere. Don't miss out on this exclusive opportunity!</p>
+                    <button data-aos="fade-up" class="rounded-[25px] border-[1px] relative top-[49px] bg-black text-[20px] py-[5px] px-[30px] hover:py-[6px] text-white hover:text-black border-black hover:border-none hover:bg-green-500  ">Register</button>
+                </div>
+            </div>
+            <div class="m-[70px] relative bottom-[2000px] fw-bold">
+                <section class="bg-cover">
+                    <div class="container mx-auto text-center py-5">
+                    <div class="py-5">
+                        <h1 data-aos="fade-up" class="font-bold text-4xl relative bottom-[30px]">Moments From Our Events</h1>
+                        <p data-aos="fade-up" class="text-lg">Relive the magic with "Moments from our events." Capturing the essence of each experience, these photos tell the stories of inspiration, connection, and creativity shared at our gatherings.</p>
+                        <div id="cover-slider" class="flex gap-3 items-center justify-center my-5">
+                            <div id="slider-left-btn" class="slider-btn col-span-1 cursor-pointer">
+                            <span>
+                                <i data-aos="fade-up" class="fa fa-angle-left text-2xl"></i>
+                            </span>
+                        </div>
+                        <div data-aos="fade-up"
+                            class="slider-cover show active h-40 w-full bg-cover bg-center"
+                            style="background-image: url('https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/10122b7b-410f-4200-b7db-07ade3a8e207.png');"></div>
+                        <div data-aos="fade-up"
+                            class="slider-cover show h-40 w-full bg-cover bg-center"
+                            style="background-image: url('https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/842cff21-f5c7-41c3-909b-31a6df6da746.png');"></div>
+                        <div data-aos="fade-up"
+                            class="slider-cover show h-40 w-full bg-cover bg-center"
+                            style="background-image: url('https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/10122b7b-410f-4200-b7db-07ade3a8e207.png');"></div>
+                        <div data-aos="fade-up"
+                            class="slider-cover show h-40 w-full bg-cover bg-center"
+                            style="background-image: url('https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/66b66749-52ea-4e39-855a-dc152bb24ff3.png');"></div>
+                        <div data-aos="fade-up"
+                            class="slider-cover show h-40 w-full bg-cover bg-center"
+                            style="background-image: url('https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/5c9b0718-e0bf-4a13-b950-352666ea16d9.png');"></div>
+                        <div data-aos="fade-up"
+                            class="slider-cover show h-40 w-full bg-cover bg-center"
+                            style="background-image: url('https://cloud.justinmind.com/usernote/prototype/add9f3dd212d89365fdc65164792206166e59e914d797192978b4efe795e842f/images/1a45abf1-5c9e-4e6b-ac4f-769798fd0b5c.png');"></div>
+                            <div id="slider-right-btn" class="slider-btn col-span-1 cursor-pointer">
+                            <span>
+                                <i data-aos="fade-up" class="fa fa-angle-right text-2xl"></i>
+                            </span>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </div>
+                <div class="workshops m-[0px] relative bottom-[2000px] bg-slate-100 py-[10px] h-[1200px]">
+                    <div class="m-[70px] h-[500px]">    
+                            <div class=" relative bottom-[10px]">
+                                <p data-aos="fade-up" class="text-[40px] font-black">Workshops</p>
+                                <p data-aos="fade-up" class="text-[20px] font-light relative top-[20px]">Dive into hands-on learning with our diverse workshops. From practical skills to creative exploration, each session offers a unique opportunity to enhance your expertise</p>
+                            </div>
+                        <section data-aos="fade-up" class="w-1/2 rounded-[20px] relative px-[30px] pb-[40px] py-[80px] top-[50px] bg-yellow-400">
+                            <div class="relative bottom-[40px]">
+                                <h1 data-aos="fade-up" class=" text-[35px] font-bold">Interactive Prototyping Masterclass</h1>
+                                <p data-aos="fade-up" class="text-[20px] font-light relative top-[20px]">Explore the art of interactive prototyping in this hands-on masterclass. Dive into tools like Figma and Adobe XD to create engaging prototypes that bridge the gap between design and usability. Unlock the secrets of seamless user experiences.</p>
+                                <button data-aos="fade-up" class="rounded-[25px] relative top-[50px] border-[1px] text-[20px] py-[5px] px-[30px] hover:py-[6px] border-black hover:border-none hover:bg-black  hover:text-white">Learn More</button>
+                            </div>
+                        </section>
+                        <section data-aos="fade-up" class="w-1/2 rounded-[20px] h-[420px] relative px-[30px] pb-[40px] py-[80px] left-[600px] bottom-[370px] bg-blue-300">
+                            <div class="relative bottom-[40px]">
+                                <h1 data-aos="fade-up" class=" text-[35px] font-bold">Typography in UI: Beyond the Basics</h1>
+                                <p data-aos="fade-up" class="text-[20px] font-light relative top-[20px]">Elevate your design skills with a deep dive into advanced typography for UI. Learn how to use fonts strategically, create hierarchy, and enhance readability. Discover the impact of typography on user perception and engagement.</p>
+                                <button data-aos="fade-up" class="rounded-[25px] relative top-[80px] border-[1px] text-[20px] py-[5px] px-[30px] hover:py-[6px] border-black hover:border-none hover:bg-black  hover:text-white">Learn More</button>
+                            </div>
+                        </section>
+                        <section data-aos="fade-up" class="w-1/2 rounded-[20px] h-[420px] relative px-[30px] pb-[40px] py-[80px] bottom-[330px] bg-purple-300">
+                            <div class="relative bottom-[40px]">
+                                <h1 data-aos="fade-up" class=" text-[35px] font-bold">User-Centric Wireframing Techniques</h1>
+                                <p data-aos="fade-up" class="text-[20px] font-light relative top-[20px]">Delve into the art of wireframing with a focus on user-centric design. Uncover techniques to translate ideas into intuitive wireframes that prioritize user needs. Navigate the balance between simplicity and functionality for optimal usability.</p>
+                                <button data-aos="fade-up" class="rounded-[25px] relative top-[50px] border-[1px] text-[20px] py-[5px] px-[30px] hover:py-[6px] border-black hover:border-none hover:bg-black  hover:text-white">Learn More</button>
+                            </div>
+                        </section>
+                        <section data-aos="fade-up" class="w-1/2 rounded-[20px] h-[420px] relative px-[30px] pb-[40px] py-[80px] left-[600px] bottom-[750px] bg-yellow-400">
+                            <div class="relative bottom-[40px]">
+                                <h1 data-aos="fade-up" class=" text-[35px] font-bold">Designing Accessible Interfaces for All</h1>
+                                <p data-aos="fade-up" class="text-[20px] font-light relative top-[20px]">Learn inclusive design principles for creating accessible interfaces. Explore techniques to ensure your designs cater to diverse user needs, including those with disabilities. Enhance your skills in building products that are usable by everyone.</p>
+                                <button data-aos="fade-up" class="rounded-[25px] relative top-[50px] border-[1px] text-[20px] py-[5px] px-[30px] hover:py-[6px] border-black hover:border-none hover:bg-black  hover:text-white">Learn More</button>
+                            </div>
+                        </section>
+                        <div data-aos="fade-up" class="slider relative bottom-[600px]">
+                            <div class="slide-track ">
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+                                </div>
+                                <div class="slide">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                            <div class="footer relative  bottom-[590px] flex px-7 py-3 items-center border-b-2">
+                                <h1 data-aos="fade-up" onclick="Scroll()" class="Title1 text-[45px] font-bold md:py-0 py-4 cursor-pointer">Design Hub</h1>
+                                <p data-aos="fade-up" class="cursor-pointer text-[20px] relative left-[140px] p-4 items-center hover:text-yellow-400">contact@designhub.com</p>
+                                <p data-aos="fade-up" class="cursor-pointer text-[20px] relative left-[150px] p-4 items-center hover:text-yellow-400">Privacy policy</p>
+                                <p data-aos="fade-up" class="cursor-pointer text-[20px] relative left-[150px] p-4 items-center hover:text-yellow-400">Terms & Agreements</p>
+                            </div>
+                                <div class="footer relative bottom-[580px] flex px-7 py-0 items-center">
+                                <h1 data-aos="fade-right" class=" text-[25px] font-thin md:py-0 py-4 cursor-pointer">© All rights reserved</h1>
+                            </div>
+                        </div>    
+                </div>
+            </div>
+        </div>
+    <script src="script.js"></script>
+    <!-- Swiper Script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+            keyboard: {
+                enabled: true,
+                onlyInViewport: true,
+            },
+            effect: 'fade', 
+            fadeEffect: {
+                crossFade: true
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    </body>
+</html>
